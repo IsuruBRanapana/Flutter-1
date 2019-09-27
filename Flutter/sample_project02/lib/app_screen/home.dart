@@ -9,7 +9,11 @@ class Home extends StatelessWidget{
       alignment: Alignment.center,
       margin: EdgeInsets.all(15.0),
       padding: EdgeInsets.all(10.0),
-      child: Text("Hello",textDirection: TextDirection.ltr,),
+      child: Text("Hello",textDirection: TextDirection.ltr,
+      style: TextStyle(color: Colors.black87,
+      decoration: TextDecoration.none,
+      fontSize: 65.0,
+       ),),
    
     )
      ,);
