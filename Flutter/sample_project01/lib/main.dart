@@ -4,6 +4,7 @@ import 'package:sample_project01/apps_screen/first_screen.dart';
 void main(){
   runApp(new MyFlutterApp());
 }
+
 class MyFlutterApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
@@ -15,14 +16,5 @@ class MyFlutterApp extends StatelessWidget{
       )
          );
       
-      
-            
-            
-        
-      
-      
-      
-        
-        }
-      
+  }
 }
