@@ -80,10 +80,7 @@ class SayHyButton extends StatelessWidget{
         },
       ),
     );
-
-   
-      
-    }
+ }
      void clickfn(BuildContext context){
       var alertDialog=AlertDialog(
         title:Text ("Hey welcome"),
