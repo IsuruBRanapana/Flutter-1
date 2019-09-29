@@ -76,10 +76,23 @@ class SayHyButton extends StatelessWidget{
         elevation: 6.0,
         child: Text("Say Hy for Open",style:TextStyle(color: Colors.white,fontSize:25,)),
         onPressed: (){
-
+            clickfn(context);
         },
       ),
     );
+
+   
+      
+    }
+     void clickfn(BuildContext context){
+      var alertDialog=AlertDialog(
+        title:Text ("Hey welcome"),
+        content:Text( "Thank For Your Attention"),
+      );
+      showDialog(context: context,
+      builder: (BuildContext context){
+        return alertDialog;});
+      }
   }
 
-}
+
