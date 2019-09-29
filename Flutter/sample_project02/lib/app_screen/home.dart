@@ -50,7 +50,8 @@ class Home extends StatelessWidget{
    
    
 
-      ],)
+      ],),
+      SayHyButton()
       
      
   
@@ -61,4 +62,24 @@ class Home extends StatelessWidget{
          )
      ,);
   }
+}
+class SayHyButton extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    
+    return Container(
+      margin: EdgeInsets.only(top: 15.0),
+      width: 305.0,
+      height: 55.0,
+      child: RaisedButton(
+        color: Colors.deepOrange,
+        elevation: 6.0,
+        child: Text("Say Hy for Open",style:TextStyle(color: Colors.white,fontSize:25,)),
+        onPressed: (){
+
+        },
+      ),
+    );
+  }
+
 }
