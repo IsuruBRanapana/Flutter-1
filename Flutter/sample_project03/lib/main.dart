@@ -19,7 +19,21 @@ void main(){
 
     )
     )
-;}
+;}//main method
+void showSnackBar(BuildContext context,String item){
+  var snackbar=SnackBar(
+    content: Text("On tapped $item"),
+    action: SnackBarAction(
+      label: "Undo",
+      onPressed: (){
+        debugPrint("Temperarly restroe function");
+      },
+    ),
+    
+  );
+  Scaffold.of(context).showSnackBar(snackbar);
+
+}
 List<String> getelements(){
   var items=List.generate(100, (counter)=>"Item $counter");
   return items;
@@ -31,7 +45,8 @@ Widget getlistview(){
       return ListTile(title: Text(widgetitems[index]),
       leading: Icon(Icons.arrow_back_ios),
       onTap: (){
-        debugPrint("You allow ${widgetitems[index]}");
+        showSnackBar(context, widgetitems[index]);
+        //debugPrint("You allow ${widgetitems[index]}");
       },);
     }
     ,);
