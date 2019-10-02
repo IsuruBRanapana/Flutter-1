@@ -8,6 +8,13 @@ void main(){
     home: Scaffold(
       appBar: AppBar(title:Text("Long List View")),
       body:getlistview() ,
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+        onPressed: (){
+          debugPrint("Float");
+        },
+        tooltip: 'Add New tool',
+      ),
     ),
 
     )
