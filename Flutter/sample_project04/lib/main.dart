@@ -5,6 +5,7 @@ void main(){
       home: Scaffold(
         appBar: AppBar(title: Text("Simple basic list view"),),
         body: getlistview(),
+        getLongListView(),
         
       ),
     )
@@ -38,4 +39,28 @@ Widget getlistview(){
     ],
   );
   return listview;
+}
+
+//for long list
+List<String> getListItems(){
+  var items= List<String>.generate(1000, (counter)=>"Item $counter");
+  return items;
+}
+
+Widget getLongListView(){
+  var listItems=getListItems();
+  var longlistView=ListView.builder(
+      itemBuilder: (context,index){
+        return ListTile(
+          title: Text(
+            listItems[index]
+          ),
+          onTap: (){
+            showSnackBar(context,listItems[index]);
+          },
+          leading: Icon(Icons.accessibility),
+        );
+      }
+  );
+  return longlistView;
 }
